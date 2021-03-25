@@ -7,6 +7,7 @@
 
 #include "Entity.h"
 #include "Classes.h"
+#include "attacks.h"
 
 void testEntityClass();
 

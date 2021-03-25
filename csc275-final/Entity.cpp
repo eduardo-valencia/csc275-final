@@ -84,8 +84,8 @@ void Entity::setEffects(Attack& attack)
 {
 	// Get attack type
 	const string attackType = attack.getName();
-	// If the attack type was melee
-	if (attackType == "Melee")
+	// If the attack type was ranged
+	if (attackType == "Ranged")
 	{
 		// Set the defense multiplier to 0.5 to take half damage
 		setDefenseMultiplier(0.5);
