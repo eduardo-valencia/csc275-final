@@ -23,6 +23,8 @@ Monster generateMonster(int round)
 	const int health = baseHealth * round;
 	// Get attacker class
 	const string attackerClass = getAttackerClass();
+	// Define base attack amount
+	const int baseAttack = 25;
 	// Return a new monster
-	return Monster(25, attackerClass, "Monster");
+	return Monster(baseAttack, attackerClass, "Monster", health);
 }

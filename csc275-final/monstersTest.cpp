@@ -6,6 +6,7 @@ void testMonsters()
 	{
 		Monster monster = generateMonster(1);
 		monster.displayStats();
+		cout << "Attacker class: " << monster.getAttackerClass() << endl;
 		cout << endl;
 	}
 }

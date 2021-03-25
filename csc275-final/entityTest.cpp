@@ -5,19 +5,19 @@ vector<Attack> attacks = getAttacks();
 
 Entity getShielder()
 {
-	Entity shielder(1, classes.shielder, "Mash Kyrielight");
+	Entity shielder(1, classes.shielder, "Mash Kyrielight", 100);
 	return shielder;
 }
 
 Entity getSwordsman()
 {
-	Entity swordsman(1, classes.swordsman, "Saber");
+	Entity swordsman(1, classes.swordsman, "Saber", 100);
 	return swordsman;
 }
 
 Entity getArcher()
 {
-	Entity archer(1, classes.archer, "Emiya Shirou");
+	Entity archer(1, classes.archer, "Emiya Shirou", 100);
 	return archer;
 }
 
@@ -68,11 +68,11 @@ void testEntitiesCanTalk()
 
 void testEntityClass()
 {
-	Entity myEntity(1000, classes.swordsman, "Hero");
+	Entity myEntity(1000, classes.swordsman, "Hero", 100);
 	myEntity.displayStats();
 	cout << endl;
 
-	Entity myEntity2(2, classes.lancer, "Mongrel");
+	Entity myEntity2(2, classes.lancer, "Mongrel", 100);
 	myEntity2.decreaseHealth(1);
 	myEntity2.displayStats();
 	cout << endl;
@@ -80,7 +80,7 @@ void testEntityClass()
 	myEntity2.displayStats();
 	cout << endl;
 
-	Entity lancer(1, classes.lancer, "Lancer");
+	Entity lancer(1, classes.lancer, "Lancer", 100);
 	Entity archer = getArcher();
 	Entity swordsman = getSwordsman();
 	Entity shielder = getShielder();
@@ -94,7 +94,7 @@ void testEntityClass()
 		throw  "Archer does not counter swordsman.";
 	}
 
-	Entity enemy(500, classes.shielder, "Shielder");
+	Entity enemy(500, classes.shielder, "Shielder", 100);
 	cout << endl;
 	enemy.attack(attacks[0], myEntity);
 	myEntity.displayStats();

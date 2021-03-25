@@ -6,13 +6,19 @@
 #include "entityTest.h"
 #include "monsterClassTest.h"
 #include "monstersTest.h"
+#include "heroTest.h"
 
 int main()
 {
-    // testAttacks();
-    // testEntityClass();
-    // testMonsterClass();
-    testMonsters();
+     testAttacks();
+     cout << endl;
+     testEntityClass();
+     cout << endl;
+     testMonsterClass();
+     cout << endl;
+     testMonsters();
+     cout << endl;
+     testHeroClass();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
