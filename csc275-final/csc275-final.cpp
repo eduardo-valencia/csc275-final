@@ -3,10 +3,12 @@
 
 #include <iostream>
 #include "testAttacks.h"
+#include "entityTest.h"
 
 int main()
 {
-    testAttacks();
+    // testAttacks();
+    testEntityClass();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

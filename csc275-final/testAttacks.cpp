@@ -1,5 +1,4 @@
-#include "attacks.h"
-#include <iostream>
+#include "testAttacks.h"
 
 using namespace std;
 
