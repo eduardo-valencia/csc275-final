@@ -38,6 +38,34 @@ void testShieldersTakeHalfDamage()
 	cout << endl;
 }
 
+void testCountersDealDoubleDamage()
+{
+	Entity archer = getArcher();
+	Entity swordsman = getSwordsman();
+	archer.attack(attacks[0], swordsman);
+	archer.attack(attacks[0], archer);
+}
+
+void testRangedAttacksHaveDefenseMultipliers()
+{
+	Entity archer = getArcher();
+	archer.attack(attacks[1], archer);
+	archer.attack(attacks[1], archer);
+}
+
+void testMagicAttacksHaveAttackMultipliers()
+{
+	Entity archer = getArcher();
+	archer.attack(attacks[2], archer);
+	archer.attack(attacks[2], archer);
+}
+
+void testEntitiesCanTalk()
+{
+	Entity archer = getArcher();
+	archer.talk("Hi! My name is Emiya.");
+}
+
 void testEntityClass()
 {
 	Entity myEntity(1000, classes.swordsman, "Hero");
@@ -73,4 +101,12 @@ void testEntityClass()
 	cout << endl;
 
 	testShieldersTakeHalfDamage();
+	cout << endl;
+	testCountersDealDoubleDamage();
+	cout << endl;
+	testRangedAttacksHaveDefenseMultipliers();
+	cout << endl;
+	testMagicAttacksHaveAttackMultipliers();
+	cout << endl;
+	testEntitiesCanTalk();
 }
