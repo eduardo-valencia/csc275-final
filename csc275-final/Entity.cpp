@@ -1,10 +1,16 @@
 #include "Entity.h"
 #include "Classes.h"
 
-Entity::Entity(int newBaseAttack, string newAttackerClass, string newName) : baseAttack(newBaseAttack), attackerClass(newAttackerClass), name(newName)
+Entity::Entity(int newBaseAttack, string newAttackerClass, string newName, int newHealth)
 {
 	// Initialize health
-	Entity::health = 100;
+	Entity::health = newHealth;
+	// Initialize base attack
+	Entity::baseAttack = newBaseAttack;
+	// Initialize attacker class
+	Entity::attackerClass = newAttackerClass;
+	// Initialize name
+	Entity::name = newName;
 	// Initialize damage multiplier
 	Entity::attackMultiplier = 1;
 	// Initialize defense multiplier

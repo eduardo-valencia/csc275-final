@@ -16,7 +16,7 @@ class Entity
 {
 public:
 	// Define constructor
-	Entity(int newBaseAttack, string newAttackerClass, string newName);
+	Entity(int newBaseAttack, string newAttackerClass, string newName, int newHealth);
 
 	// Define method to decrease health
 	void decreaseHealth(int damage);

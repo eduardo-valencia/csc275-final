@@ -4,11 +4,15 @@
 #include <iostream>
 #include "testAttacks.h"
 #include "entityTest.h"
+#include "monsterClassTest.h"
+#include "monstersTest.h"
 
 int main()
 {
     // testAttacks();
-    testEntityClass();
+    // testEntityClass();
+    // testMonsterClass();
+    testMonsters();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

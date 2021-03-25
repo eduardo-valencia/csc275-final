@@ -1,5 +1,7 @@
+#include "monsters.h"
+
 // Define method to get random attacker class
-static string getAttackerClass()
+string getAttackerClass()
 {
 	struct Classes classes = getClasses();
 	const string classNameList[] = {
@@ -12,8 +14,8 @@ static string getAttackerClass()
 	return classNameList[classIndex];
 }
 
-// Define static method to generate enemy
-static Monster generateMonster(int round)
+// Define method to generate monster
+Monster generateMonster(int round)
 {
 	// Define minimum enemy health
 	const int baseHealth = 1000;

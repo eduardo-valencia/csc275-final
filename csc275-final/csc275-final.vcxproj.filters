@@ -39,7 +39,13 @@
     <ClCompile Include="Monster.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="enemy.cpp">
+    <ClCompile Include="monsterClassTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="monsters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="monstersTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,6 +69,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Monster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="monsterClassTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="monsters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="monstersTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
