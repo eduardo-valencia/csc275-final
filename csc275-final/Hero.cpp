@@ -22,12 +22,11 @@ void Hero::introduceSelf()
 	cout << "It is an honor to fight by your side.\n";
 }
 
-// Define method to show enemy stats and attacker class
+// Define method to show enemy stats
 void Hero::showEnemyInfo(Monster monster)
 {
 	// Show monster's stats
 	monster.displayStats();
-	cout << "Attacker Class: " << monster.getAttackerClass() << endl;
 	cout << endl;
 }
 
