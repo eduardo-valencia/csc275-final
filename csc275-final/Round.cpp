@@ -11,19 +11,46 @@ void Round::displayAttackChoice(Attack attack, int attackIndex)
 	cout << attackIndex << ") " << attack.getName() << endl;
 }
 
+// Define method to prompt for an attack choice
+int Round::promptForAttackChoice(vector<Attack>& attacks)
+{
+	// Get choice index
+	int choiceIndex = getIntInput();
+	// Get whether the attack is not in range
+	const bool attackNotInRange = choiceIndex >= attacks.size() || choiceIndex < 0;
+	// If the attack index is not in range
+	if (attackNotInRange)
+	{
+		// Throw a range error
+		throw range_error("Please choose one of the listed attacks.\n");
+	}
+	return choiceIndex;
+}
+
+// Define method to try getting attack choice and provide exception handling.
+int Round::tryGettingAttackChoice(vector<Attack>& attacks)
+{
+	// Try prompt for the attack choice
+	try
+	{
+		return promptForAttackChoice(attacks);
+	}
+	// Catch an error
+	catch (const exception& error)
+	{
+		// Show error
+		cout << error.what();
+		// Try again
+		tryGettingAttackChoice(attacks);
+	}
+}
+
+// Define method to get attack choice
 int Round::getAttackChoice(vector<Attack>& attacks)
 {
 	cout << "Please enter your attack choice:\n";
-	// Get choice index
-	int choiceIndex = getIntInput();
-	// While the index isn't in range
-	while (choiceIndex >= attacks.size() || choiceIndex < 0)
-	{
-		cout << "Please enter your choice as a valid number.\n";
-		// Update input
-		choiceIndex = getIntInput();
-	}
-	return choiceIndex;
+	// Get a valid attack choice
+	return tryGettingAttackChoice(attacks);
 }
 
 // Define method to allow player to select an attack

@@ -40,7 +40,13 @@ private:
 	// Define method to add normal monsters to list of monsters
 	void addGeneratedMonsters(vector<Monster>& monsters);
 
-	// Define method to get user's attack choice as an index
+	// Define method to prompt the user for their attack choice
+	int promptForAttackChoice(vector<Attack>& attacks);
+
+	// Define method to try getting a valid attack choice and provide exception handling
+	int tryGettingAttackChoice(vector<Attack>& attacks);
+
+	// Define method to get user's attack choice as an index.
 	int getAttackChoice(vector<Attack>& attacks);
 
 	// Define method to get vector of generated monsters
