@@ -91,20 +91,20 @@ void Entity::setEffects(Attack& attack)
 	// Get attack type
 	const string attackType = attack.getName();
 	// If the attack type was ranged
+	// Reset attack multiplier
+	setAttackMultiplier(1);
+	// Reset defense multiplier
+	setDefenseMultiplier(1);
 	if (attackType == "Ranged")
 	{
 		// Set the defense multiplier to 0.5 to take half damage
 		setDefenseMultiplier(0.5);
-		// Reset attack multiplier
-		setAttackMultiplier(1);
 	}
 	// Otherwise if the attack type was "Magic"
 	else if (attackType == "Magic")
 	{
 		// Set the attack multiplier to 2 to double attack amount
 		setAttackMultiplier(2);
-		// Reset defense multiplier
-		setDefenseMultiplier(1);
 	}
 }
 

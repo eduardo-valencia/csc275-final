@@ -18,7 +18,7 @@ string getAttackerClass()
 Monster generateMonster(int round)
 {
 	// Define minimum enemy health
-	const int baseHealth = 100;
+	const int baseHealth = 50;
 	// Define health, with round modifier
 	const int health = baseHealth * round;
 	// Get attacker class
