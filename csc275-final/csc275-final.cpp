@@ -115,11 +115,29 @@ void askIfUserWantsToContinuePlaying(bool& continuePlaying)
     continuePlaying = answer == "yes";
 }
 
+// Define function to show win / loss status
+void displayResults(Hero& hero)
+{
+    // If the hero is alive
+    if (hero.getHealth())
+    {
+        cout << "Congrats! You won!\n";
+    }
+    // Otherwise, explain they lost
+    else
+    {
+        cout << "Sorry, your hero died.\n";
+    }
+}
+
 // Define function to play all rounds
 void playRounds(bool& continuePlaying)
 {
     // Get chosen hero
     Hero hero = selectHero();
+    // Have the hero introduce themselves
+    hero.introduceSelf();
+    cout << endl;
     // Define variable to store round index
     int roundNumber = 1;
     // While the hero is not dead and there are still rounds remaining
@@ -132,6 +150,8 @@ void playRounds(bool& continuePlaying)
         // Increment round number
         ++roundNumber;
     }
+    // Display win / loss status
+    displayResults(hero);
     // Update whether the user wants to continue playing
     askIfUserWantsToContinuePlaying(continuePlaying);
 }
