@@ -41,7 +41,7 @@ int Round::tryGettingAttackChoice(vector<Attack>& attacks)
 		// Show error
 		cout << error.what();
 		// Try again
-		tryGettingAttackChoice(attacks);
+		return tryGettingAttackChoice(attacks);
 	}
 }
 
