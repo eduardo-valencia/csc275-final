@@ -9,6 +9,8 @@
 #include <stdlib.h>
 // Include vector
 #include <vector>
+// Include thread
+#include <thread>
 // Include file with input utilities
 #include "inputs.h"
 // Include Hero class
@@ -149,6 +151,26 @@ void displayResults(Hero& hero)
     }
 }
 
+// Define function to create a new round
+void createRound(int& roundNumber, Hero& hero)
+{
+    // Define a new round
+    Round round(roundNumber, hero);
+    // Start round
+    round.start();
+    // Increment round number
+    ++roundNumber;
+}
+
+// Define function to create a new thread for creating a round
+void createRoundThread(int& roundNumber, Hero& hero)
+{
+    // Define variable for thread
+    thread roundThread(createRound, ref(roundNumber), ref(hero));
+    // Wait for the thread
+    roundThread.join();
+}
+
 // Define function to play all rounds
 void playRounds(bool& continuePlaying)
 {
@@ -162,12 +184,8 @@ void playRounds(bool& continuePlaying)
     // While the hero is not dead and there are still rounds remaining
     while (hero.getHealth() && roundNumber <= 3)
     {
-        // Define a new round
-        Round round(roundNumber, hero);
-        // Start round
-        round.start();
-        // Increment round number
-        ++roundNumber;
+        // Create a new thread for the round
+        createRoundThread(roundNumber, hero);
     }
     // Display win / loss status
     displayResults(hero);
@@ -175,12 +193,15 @@ void playRounds(bool& continuePlaying)
     askIfUserWantsToContinuePlaying(continuePlaying);
 }
 
+// Define function to ask the user to continue and force them to press key
 void askToContinue()
 {
     cout << "Press any key to continue.\n";
+    // Force them to press key to continue
     forceToPressKeyToContinue();
 }
 
+// Define main function
 int main()
 {
     // Welcome user
