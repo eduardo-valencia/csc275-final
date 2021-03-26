@@ -63,7 +63,7 @@ int Entity::getBaseAttack()
 // Define method to get the base attack with multipliers
 float Entity::getDamageWithModifiers(Attack& attackType)
 {
-	return getBaseAttack() + attackType.getAmount() * attackMultiplier * defenseMultiplier;
+	return getBaseAttack() + attackType.getAmount() * getAttackMultiplier() * getDefenseMultiplier();
 }
 
 // Define method to get attack amount
