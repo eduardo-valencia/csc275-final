@@ -54,10 +54,16 @@ void Entity::setDefenseMultiplier(float newDefenseMultiplier)
 	defenseMultiplier = newDefenseMultiplier;
 }
 
-// Define method to get the base attack with multipliers
-float Entity::getBaseAttackAmount(Attack& attackType)
+// Define base attack's accessor
+int Entity::getBaseAttack()
 {
-	return attackType.getAmount() * attackMultiplier * defenseMultiplier;
+	return baseAttack;
+}
+
+// Define method to get the base attack with multipliers
+float Entity::getDamageWithModifiers(Attack& attackType)
+{
+	return getBaseAttack() + attackType.getAmount() * attackMultiplier * defenseMultiplier;
 }
 
 // Define method to get attack amount
@@ -66,7 +72,7 @@ float Entity::getAttackAmount(Attack& attackType, Entity& enemy)
 	// Get classes
 	const Classes classes = getClasses();
 	// Get base attack amount
-	const int baseAttack = getBaseAttackAmount(attackType);
+	const int baseAttack = getDamageWithModifiers(attackType);
 	// Get  if the current entity counters the enemy
 	const bool countersEnemy = getIfCountersEnemy(enemy);
 	//  If it does counter the enemy
@@ -144,20 +150,24 @@ string Entity::getAttackerClass()
 	return attackerClass;
 }
 
+// Define attack multiplier's accessor
 float Entity::getAttackMultiplier()
 {
 	return attackMultiplier;
 }
 
+// Define defense multiplier's accessor
 float Entity::getDefenseMultiplier()
 {
 	return defenseMultiplier;
 }
 
+//  Define method to show entity stats
 void Entity::displayStats()
 {
 	cout << getName() << " (" << getAttackerClass() << "):" << endl;
 	cout << "Health: " << getHealth() << endl;
+	cout << "Attack: " << getBaseAttack() << endl;
 	cout << "Damage Multiplier: " << getAttackMultiplier() << endl;
 	cout << "Defense Multiplier: " << getDefenseMultiplier() << endl;
 }

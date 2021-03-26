@@ -47,6 +47,9 @@ public:
 
 	// Define defense multiplier accessor
 	float getDefenseMultiplier();
+
+	// Define base attack's accessor
+	int getBaseAttack();
 private:
 	// Define int to store the entity's base attack amount
 	int baseAttack;
@@ -73,7 +76,7 @@ private:
 	void setDefenseMultiplier(float newDefenseMultiplier);
 
 	// Define method to get the base attack amount, the base attack affected by multipliers
-	float getBaseAttackAmount(Attack& attackType);
+	float getDamageWithModifiers(Attack& attackType);
 
 	// Define method to get total attack amount
 	float getAttackAmount(Attack& attackType, Entity& enemy);
