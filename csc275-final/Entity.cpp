@@ -156,7 +156,7 @@ float Entity::getDefenseMultiplier()
 
 void Entity::displayStats()
 {
-	cout << "Name: " << getName() << endl;
+	cout << getName() << " (" << getAttackerClass() << "):" << endl;
 	cout << "Health: " << getHealth() << endl;
 	cout << "Damage Multiplier: " << getAttackMultiplier() << endl;
 	cout << "Defense Multiplier: " << getDefenseMultiplier() << endl;

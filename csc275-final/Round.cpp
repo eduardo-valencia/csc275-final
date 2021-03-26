@@ -165,7 +165,7 @@ void Round::start()
 {
 	// Define int to store wave number
 	int waveNumber = 1;
-	cout << "The wave is starting!\n";
+	cout << "Round " << roundNumber << " is starting!\n";
 	cout << "Please press any key to continue.\n";
 	// Force user to press key to continue
 	forceToPressKeyToContinue();
