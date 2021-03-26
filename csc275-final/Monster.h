@@ -5,9 +5,13 @@
 // Set that the file was imported
 #define __MONSTER_CLASS_IMPORTED__
 
+// Include the Entity header file
 #include "Entity.h"
+// Include the attacks header file
 #include "attacks.h"
+// Include Classes header file
 #include "Classes.h"
+// Include stdlib
 #include <stdlib.h>
 
 // Define the Monster class, which extends the Entity class

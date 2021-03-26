@@ -45,24 +45,28 @@ bool Entity::getIfCountersEnemy(Entity& enemy)
 // Define attackMultiplier accessor
 void Entity::setAttackMultiplier(float newAttackMultiplier)
 {
+	// Set attack multiplier
 	attackMultiplier = newAttackMultiplier;
 }
 
 // Define defenseMultiplier accessor
 void Entity::setDefenseMultiplier(float newDefenseMultiplier)
 {
+	// Set defense multiplieer
 	defenseMultiplier = newDefenseMultiplier;
 }
 
 // Define base attack's accessor
 int Entity::getBaseAttack()
 {
+	// Return base attack
 	return baseAttack;
 }
 
 // Define method to get the base attack with multipliers
 float Entity::getDamageWithModifiers(Attack& attackType)
 {
+	// Return the base attack, modified by the attack type and multipliers
 	return getBaseAttack() + attackType.getAmount() * getAttackMultiplier() * getDefenseMultiplier();
 }
 
@@ -128,18 +132,21 @@ void Entity::attack(Attack& type, Entity& enemy)
 // Define name accessor
 string Entity::getName()
 {
+	// Return the name
 	return name;
 }
 
 // Define health accessor
 int Entity::getHealth()
 {
+	// Return the health
 	return health;
 }
 
 // Define method to make entity talk
 void Entity::talk(string message)
 {
+	//  Get name
 	const string name = getName();
 	cout << name << ": " << message << endl;
 }
@@ -147,18 +154,21 @@ void Entity::talk(string message)
 // Define method to get class type
 string Entity::getAttackerClass()
 {
+	// Return the attacker class
 	return attackerClass;
 }
 
 // Define attack multiplier's accessor
 float Entity::getAttackMultiplier()
 {
+	// Return attack multiplier
 	return attackMultiplier;
 }
 
 // Define defense multiplier's accessor
 float Entity::getDefenseMultiplier()
 {
+	// Return defense multiplier
 	return defenseMultiplier;
 }
 

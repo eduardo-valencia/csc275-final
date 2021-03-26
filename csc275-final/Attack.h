@@ -5,6 +5,7 @@
 // Define the attack class
 #define __ATTACK_CLASS_IMPORTED__
 
+// Include string
 #include <string>
 
 using namespace std;

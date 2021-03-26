@@ -5,8 +5,11 @@
 // Set that it was imported
 #define __HERO_CLASS_IMPORTED__
 
+// Include Entity header file
 #include "Entity.h"
+// Include Monster header file
 #include "Monster.h"
+// Include vector
 #include <vector>
 
 // Define the "Hero" class, extending from the Entity class

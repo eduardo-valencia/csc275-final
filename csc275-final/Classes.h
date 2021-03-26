@@ -5,6 +5,7 @@
 // Set that the file was imported
 #define __CLASSES_FILE_IMPORTED__
 
+// Include string
 #include <string>
 
 using namespace std;

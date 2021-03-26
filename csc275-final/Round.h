@@ -5,10 +5,15 @@
 // Set that the round class was defined
 #define __ROUND_CLASS_DEFINED__
 
+// Include monsters header file
 #include "monsters.h"
+// Include Hero header file
 #include "Hero.h"
+// Include inputs header file
 #include "inputs.h"
+// Include iostream
 #include <iostream>
+// Include vector
 #include <vector>
 
 // Define the Round class

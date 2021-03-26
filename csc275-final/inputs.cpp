@@ -20,6 +20,7 @@ int getIntInput()
 	return answer;
 }
 
+// Define function to force the user to press a key to continue
 void forceToPressKeyToContinue()
 {
 	// Define variable to store answer

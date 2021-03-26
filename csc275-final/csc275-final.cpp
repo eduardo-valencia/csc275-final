@@ -1,13 +1,21 @@
 // csc275-final.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+// Include iostream
 #include <iostream>
+// include time
 #include <time.h>
+// include stdlib
 #include <stdlib.h>
+// Include vector
 #include <vector>
+// Include file with input utilities
 #include "inputs.h"
+// Include Hero class
 #include "Hero.h"
+// Include Monster class
 #include "Monster.h"
+// include Round
 #include "Round.h"
 
 using namespace std;
@@ -70,16 +78,27 @@ int getHeroChoice(vector<Hero>& heroes)
 // Define function to get heroes
 vector<Hero> getHeroes()
 {
+    // Define vector to store heroes
     vector<Hero> heroes;
+    // Get the classes
     struct Classes classes = getClasses();
+    // Create hercules
     Hero hercules(100, classes.swordsman, "Hercules", 5000, "I am the god of strength");
+    // create gilgamesh
     Hero gilgamesh(100, classes.archer, "Gilgamesh", 4000, "I am the strongest hero, the hero who defied the heavens.");
+    // Create leonidas
     Hero leonidas(100, classes.shielder, "Leonidas", 4000, "King of Sparta");
+    // Create romulus
     Hero romulus(100, classes.lancer, "Romulus", 4500, "Founder of Rome");
+    // add hercules
     heroes.push_back(hercules);
+    // Add gilgamesh
     heroes.push_back(gilgamesh);
+    // Add leonidas
     heroes.push_back(leonidas);
+    // Add romulus
     heroes.push_back(romulus);
+    // Return heroes
     return heroes;
 }
 

@@ -3,14 +3,18 @@
 // Define method to get random attacker class
 string getAttackerClass()
 {
+	// Get the classes
 	struct Classes classes = getClasses();
+	// Define the classes list
 	const string classNameList[] = {
 		classes.archer,
 		classes.lancer,
 		classes.shielder,
 		classes.swordsman
 	};
+	// Choose a random class index
 	const int classIndex = rand() % 3;
+	// Return a random class
 	return classNameList[classIndex];
 }
 

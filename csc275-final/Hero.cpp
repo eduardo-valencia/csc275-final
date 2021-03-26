@@ -1,3 +1,4 @@
+// Include header file
 #include "Hero.h"
 
 // Define hero constructor and use parent's constructor
@@ -10,6 +11,7 @@ Hero::Hero(int newBaseAttack, string newAttackerClass, string newName, int newHe
 // Define description accessor
 string Hero::getDescription()
 {
+	// Return description
 	return description;
 }
 
