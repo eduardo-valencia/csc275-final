@@ -145,26 +145,32 @@
     <ClCompile Include="csc275-final.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="heroTest.cpp" />
+    <ClCompile Include="inputs.cpp" />
     <ClCompile Include="monsters.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="entityTest.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="monsterClassTest.cpp" />
     <ClCompile Include="monstersTest.cpp" />
+    <ClCompile Include="Round.cpp" />
     <ClCompile Include="testAttacks.cpp" />
+    <ClCompile Include="testRound.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Attack.h" />
     <ClInclude Include="attacks.h" />
     <ClInclude Include="Classes.h" />
+    <ClInclude Include="testRound.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="heroTest.h" />
+    <ClInclude Include="inputs.h" />
     <ClInclude Include="monsterClassTest.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="entityTest.h" />
     <ClInclude Include="monsters.h" />
     <ClInclude Include="monstersTest.h" />
+    <ClInclude Include="Round.h" />
     <ClInclude Include="testAttacks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

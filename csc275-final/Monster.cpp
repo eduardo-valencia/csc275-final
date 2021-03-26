@@ -12,7 +12,7 @@ Attack Monster::getRandomAttack()
 }
 
 // Override the attack method to choose random attack
-void Monster::attack(Entity enemy)
+void Monster::attack(Entity& enemy)
 {
 	// Get random attack
 	Attack attack = getRandomAttack();

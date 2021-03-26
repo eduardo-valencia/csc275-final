@@ -42,6 +42,7 @@ void Hero::scanEnemies(vector<Monster> monsters)
 		// Show info on monster
 		showEnemyInfo(monster);
 	}
+	cout << endl;
 }
 
 // Define method for hero to alert player of enemies before each wave begins

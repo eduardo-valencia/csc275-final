@@ -7,6 +7,7 @@
 #include "monsterClassTest.h"
 #include "monstersTest.h"
 #include "heroTest.h"
+#include "testRound.h"
 
 int main()
 {
@@ -19,6 +20,8 @@ int main()
      testMonsters();
      cout << endl;
      testHeroClass();
+     cout << endl;
+     testRoundClass();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

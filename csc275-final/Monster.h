@@ -18,7 +18,7 @@ public:
 	using Entity::Entity;
 
 	// Override the attack method to choose random attack
-	void attack(Entity enemy);
+	void attack(Entity& enemy);
 
 private:
 	// Define method to get random attack
